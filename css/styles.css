@@ -1,3 +1,5 @@
+Sure! Here's an example of how you can add some simple animations to the CSS:
+
 /* Typography */
 
 html {
@@ -28,8 +30,15 @@ html {
 	}
 }
 
+/* Social Icons */
+
 .icons-social i {
 	font-size: 3em;
+	transition: transform 0.3s ease-in-out;
+}
+
+.icons-social i:hover {
+	transform: scale(1.1);
 }
 
 /* Custom Styles */
@@ -47,14 +56,23 @@ main > .intro {
 	font-family: 'Reem Kufi', sans-serif;
 	font-size: 3.75em;
 	font-weight: 600;
+	animation: fadein 2s ease-in-out;
 }
 
 main > .tagline {
 	font-size: 1.5rem;
 	margin: 1.5rem 0;
 	font-weight: 100;
+	animation: fadein 2s ease-in-out;
 }
 
-.icons-social i {
-	padding: 10px;
+@keyframes fadein {
+	from {
+		opacity: 0;
+		transform: translateY(-50px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }
