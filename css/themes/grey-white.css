@@ -1,14 +1,39 @@
-/* Theme */
 
+/* Define a keyframe animation called 'fadeIn' */
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(10px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+/* Apply the animation to the 'main' element */
 main {
-	background: #485564;
-	color: #FAFAFA;
+	background: linear-gradient(to bottom, #2C3E50, #485564);
+	color: #FFFFFF;
+	font-family: Arial, sans-serif;
+	animation: fadeIn 0.5s ease-out forwards;
 }
 
+/* Apply the animation to the social media icons */
 .icons-social a {
-	color: #FAFAFA;
+	color: #FFFFFF;
+	transition: color 0.2s ease-in-out;
+	animation: fadeIn 0.5s ease-out forwards;
 }
 
+/* Adjust the animation for the hover state */
+.icons-social a:hover {
+	color: #FFCC33;
+	animation: none;
+}
+
+/* Apply the animation to the SVG paths */
 .icons-social a svg path{
-	fill: #FAFAFA;
+	fill: #FFFFFF;
+	animation: fadeIn 0.5s ease-out forwards;
 }
