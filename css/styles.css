@@ -1,6 +1,6 @@
 /* Reset */
 
-html, body {
+body {
 	margin: 0;
 	padding: 0;
 }
@@ -9,7 +9,7 @@ html, body {
 
 html {
 	font-family: 'Roboto', sans-serif;
-	font-size: 16px;
+	color: #444;
 }
 
 @media (min-width: 576px) {
@@ -36,59 +36,73 @@ html {
 	}
 }
 
-.intro {
+.icons-social i {
+	font-size: 3em;
+}
+
+/* Custom Styles */
+
+main {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	justify-content: center;
+	padding: 0 30px;
+	text-align: center;
+	background-color: #f7f7f7;
+}
+
+main > .intro {
 	font-family: 'Reem Kufi', sans-serif;
 	font-size: 3.75em;
 	font-weight: 600;
-	margin-bottom: 1rem;
+	color: #1a1a1a;
+	margin-bottom: 10px;
 }
 
-.tagline {
+main > .tagline {
 	font-size: 1.5rem;
-	margin-bottom: 2rem;
+	margin: 1.5rem 0;
 	font-weight: 100;
-}
-
-/* Social icons */
-
-.icons-social {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	margin-top: 2rem;
-}
-
-.icons-social a {
-	margin: 0.5rem;
+	color: #666;
 }
 
 .icons-social i {
-	font-size: 2rem;
-	padding: 0.5rem;
-	transition: transform 0.2s ease-in-out;
+	padding: 10px;
+	color: #444;
+	transition: all 0.2s ease-in-out;
 }
 
 .icons-social i:hover {
-	transform: scale(1.2);
+	color: #007bff;
 }
 
-/* Themes */
-
-body {
-	background-color: #f2f2f2;
-	color: #444444;
+.icons-social a:not(:last-child) {
+	margin-right: 10px;
 }
 
-.grey-white .intro {
-	color: #333333;
+/* Theme: Grey-White */
+
+.icons-social i.fab.fa-github:hover {
+	color: #24292e;
 }
 
-.grey-white .tagline {
-	color: #666666;
+.icons-social i.fab.fa-twitter:hover {
+	color: #1da1f2;
 }
 
-.grey-white .icons-social i {
-	color: #ffffff;
-	background-color: #555555;
-	border-radius: 50%;
+.icons-social i.fab.fa-dev:hover {
+	color: #0a0a0a;
+}
+
+.icons-social i.fab.fa-stack-overflow:hover {
+	color: #f48024;
+}
+
+.icons-social i.fab.fa-linkedin:hover {
+	color: #0077b5;
+}
+
+.icons-social i.fab.fa-medium:hover {
+	color: #00ab6c;
 }
